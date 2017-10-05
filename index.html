@@ -24,10 +24,10 @@ $(document).ready(function(){
       var eventData = event.data;
 
       console.log("xxx  - " + event.data);
-      console.log(event.data);
+      console.log("yyy = " + eventData);
 
       if (eventData["data"]["eventName"] == "ChatMessageReceived") {
-        alert("ChatMessageReceived: " + eventData["data"]["parameters"]["0"]);
+        console.log("ChatMessageReceived: " + eventData["data"]["parameters"]["0"]);
       }
 
   }, false);
