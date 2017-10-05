@@ -18,16 +18,15 @@ $("#location").html("<a href='" + location.href + "'  target='_blank'>" + locati
 
 $(document).ready(function(){
 
-
   window.addEventListener("message", function(event) {
 
       var eventData = event.data;
 
-      console.log("xxx  - " + event.data);
+      console.log("xxx  = " + event.data);
       console.log("yyy = " + JSON.stringify(eventData));
 
-      if (eventData["data"]["eventName"] == "ChatMessageReceived") {
-        console.log("ChatMessageReceived: " + eventData["data"]["parameters"]["0"]);
+      if (JSON.parse(JSON.stringify(eventData))["data"]["eventName"] == "ChatMessageReceived") {
+        console.log("xxx ChatMessageReceived: " + eventData["data"]["parameters"]["0"]);
       }
 
   }, false);
