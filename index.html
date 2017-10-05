@@ -24,7 +24,7 @@ $(document).ready(function(){
       var eventData = event.data;
 
       console.log("xxx  - " + event.data);
-      console.log("yyy = " + eventData);
+      console.log("yyy = " + JSON.stringify(eventData));
 
       if (eventData["data"]["eventName"] == "ChatMessageReceived") {
         console.log("ChatMessageReceived: " + eventData["data"]["parameters"]["0"]);
