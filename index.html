@@ -21,8 +21,14 @@ $(document).ready(function(){
 
   window.addEventListener("message", function(event) {
 
+      var eventData = event.data;
+
       console.log("xxx  - " + event.data);
       console.log(event.data);
+
+      if (eventData.data.eventName == "ChatMessageReceived") {
+        alert("ChatMessageReceived");
+      }
 
   }, false);
 
