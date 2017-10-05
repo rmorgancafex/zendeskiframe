@@ -20,8 +20,15 @@ $(document).ready(function(){
 
 
 window.addEventListener("message", function(event) {
+
+
     console.log("xxx  - " + event.data);
-    console.log("xxx  strinig - " + JSON.stringify(event.data));
+
+    var eventData = JSON.stringify(event.data);
+
+    console.log("xxx  strinig - " + eventData);
+
+    //console.log("xxx  strinig - " + jQuery.parseJSON(JSON.stringify(event.data)));
 
 }, false);
 
