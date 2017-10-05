@@ -22,11 +22,12 @@ $(document).ready(function(){
 
       var eventData = event.data;
 
-      console.log("xxx  = " + event.data);
-      console.log("yyy = " + JSON.stringify(eventData));
+      console.log("xxx  - " + event.data);
+      console.log("xxx - " + JSON.stringify(eventData));
+      console.log("xxx - " + JSON.parse(JSON.stringify(eventData)));
 
-      if (JSON.parse(JSON.stringify(eventData))["data"]["eventName"] == "ChatMessageReceived") {
-        console.log("xxx ChatMessageReceived: " + eventData["data"]["parameters"]["0"]);
+      if ( JSON.parse(JSON.stringify(eventData))["data"]["eventName"] == "ChatMessageReceived") {
+        console.log("xxx - ChatMessageReceived: " + eventData["data"]["parameters"]["0"]);
       }
 
   }, false);
