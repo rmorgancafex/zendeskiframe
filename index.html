@@ -19,24 +19,26 @@ $("#location").html("<a href='" + location.href + "'  target='_blank'>" + locati
 $(document).ready(function(){
 
 
-window.addEventListener("message", function(event) {
+  window.addEventListener("message", function(event) {
 
 
-    console.log("xxx  - " + event.data);
+      console.log("xxx  - " + event.data);
 
-    console.log(event.data);
+      console.log(event.data);
 
-    //var eventData = JSON.stringify(event.data);
+      //var eventData = JSON.stringify(event.data);
 
-    //console.log("xxx  strinig - " + jQuery.parseJSON(JSON.stringify(event.data)));
+      //console.log("xxx  strinig - " + jQuery.parseJSON(JSON.stringify(event.data)));
 
-}, false);
+  }, false);
 
-for (var i = 0; i < window.top.frames.length; i++) {
-    window.top.frames[i].postMessage(JSON.stringify({name: "AGENT_WIDGET__ADD_EVENT_LISTENER", data: {
-        eventName: "ChatMessageReceived"
-    }}), "*");
-}
+  for (var i = 0; i < window.top.frames.length; i++) {
+      window.top.frames[i].postMessage(JSON.stringify({name: "AGENT_WIDGET__ADD_EVENT_LISTENER", data: {
+          eventName: "ChatMessageReceived"
+      }}), "*");
+  }
+
+});
 
   </script>
 
