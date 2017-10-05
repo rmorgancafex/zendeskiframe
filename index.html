@@ -26,8 +26,8 @@ $(document).ready(function(){
       console.log("xxx  - " + event.data);
       console.log(event.data);
 
-      if (eventData.data.eventName == "ChatMessageReceived") {
-        alert("ChatMessageReceived");
+      if (eventData["data"]["eventName"] == "ChatMessageReceived") {
+        alert("ChatMessageReceived: " + eventData["data"]["parameters"]["0"]);
       }
 
   }, false);
